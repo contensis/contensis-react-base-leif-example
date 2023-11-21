@@ -1,0 +1,9 @@
+.lead {
+  font-family: 'Source Serif Pro', serif;
+  font-size: 1.375rem;
+  font-weight: 600;
+  line-height: 2rem;
+  margin: 40px auto 24px;
+  max-width: 720px;
+  width: 100%;
+}
