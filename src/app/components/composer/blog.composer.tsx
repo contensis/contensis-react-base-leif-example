@@ -35,9 +35,17 @@ const BlogComposer = ({ items }: BlogComposerProps) => {
         }
         if (props._type === 'image') {
           return (
-            <figure key={`${props._type}-${i}`}>
-              <img src={props.src} alt={props.alt} />
-              {props.caption && <figcaption>{props.caption}</figcaption>}
+            <figure key={`${props._type}-${i}`} style={{ margin: 0 }}>
+              <img
+                src={props.src}
+                alt={props.alt}
+                style={{ maxWidth: '100%', width: '100%' }}
+              />
+              {props.caption && (
+                <figcaption style={{ margin: '8px 0 0 0' }}>
+                  {props.caption}
+                </figcaption>
+              )}
             </figure>
           );
         }

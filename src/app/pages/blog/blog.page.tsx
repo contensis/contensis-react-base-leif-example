@@ -1,6 +1,6 @@
 import React from 'react';
 import loadable from '@loadable/component';
-import { MappedBlogPage, PageProps } from './blog.d';
+import { MappedBlogPage, BlogPageProps } from './blog.d';
 import { Link } from 'react-router-dom';
 import './blog.module.css';
 
@@ -11,11 +11,9 @@ const Lead = loadable(() => import('~/components/leadParagraph/leadParagraph'));
 const Composer = loadable(() => import('~/components/composer/blog.composer'));
 const Footer = loadable(() => import('~/components/footer/footer'));
 
-const Blogpage = ({ mappedEntry }: PageProps) => {
+const Blogpage = ({ mappedEntry }: BlogPageProps) => {
   const { heroProps, avatarProps, leadParagraphProps, composerProps } =
     mappedEntry || ({} as MappedBlogPage);
-
-  console.log({ mappedEntry });
 
   return (
     <>

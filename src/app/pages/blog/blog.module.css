@@ -7,12 +7,3 @@
 [data-composer='blog'] > *:not(:last-child) {
   margin-bottom: 40px;
 }
-
-[data-composer='blog'] > * {
-  margin: 0;
-}
-
-[data-composer='blog'] img {
-  width: 100%;
-  max-width: 100%;
-}
