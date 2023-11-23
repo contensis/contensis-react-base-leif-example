@@ -41,8 +41,6 @@ const GlobalStyle = createGlobalStyle`
 
   html, body {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    background-color: #ffffff;
-    color: #333333;
   }
 
   /* Set core root defaults */
@@ -57,6 +55,8 @@ const GlobalStyle = createGlobalStyle`
     font-weight: normal;
     line-height: 1.5;
     text-rendering: optimizeSpeed;
+    background-color: #ffffff;
+    color: #333333;
   }
 
   h1,

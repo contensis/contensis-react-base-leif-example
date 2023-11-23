@@ -1,13 +1,3 @@
 /node_modules
-/coverage
-/build
 /dist
-/docs
-npm-debug.log*
-*.log
-__snapshots__
-.cache
-/old
 .DS_Store
-.out
-storybook-static/
