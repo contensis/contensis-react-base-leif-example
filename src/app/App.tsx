@@ -2,15 +2,14 @@ import React from 'react';
 import { hot } from 'react-hot-loader';
 import { RouteLoader } from '@zengenti/contensis-react-base/routing';
 import { AppRootProps } from '@zengenti/contensis-react-base';
-import './app.module.css';
+import GlobalStyle from './theme/global';
 
 const AppRoot = (props: AppRootProps) => {
   return (
-    <>
-      <div id="app-root">
-        <RouteLoader {...props} />
-      </div>
-    </>
+    <div id="app-root">
+      <GlobalStyle />
+      <RouteLoader {...props} />
+    </div>
   );
 };
 

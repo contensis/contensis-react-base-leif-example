@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import loadable from '@loadable/component';
+import styled, { css } from 'styled-components';
 
 import {
   UseMinilistProps,
@@ -8,10 +9,10 @@ import {
 import mappers from '~/search/transformations';
 import { CardProps } from '~/components/blogCard/blogCard';
 
-const Header = loadable(() => import('~/components/header/header'));
-const Hero = loadable(() => import('~/components/hero/hero'));
-const Blogs = loadable(() => import('~/components/blogListing/blogListing'));
-const Footer = loadable(() => import('~/components/footer/footer'));
+const Header = loadable(() => import(/* webpackChunkName: "header-component" */'~/components/header/header'));
+const Hero = loadable(() => import(/* webpackChunkName: "hero-component" */'~/components/hero/hero'));
+const Blogs = loadable(() => import(/* webpackChunkName: "blogs-component" */'~/components/blogListing/blogListing'));
+const Footer = loadable(() => import(/* webpackChunkName: "footer-component" */'~/components/footer/footer'));
 
 const InitalState = { id: '', mapper: (e: any = []) => e } as UseMinilistProps;
 
@@ -31,13 +32,19 @@ const Homepage = () => {
   return (
     <>
       <Header />
-      <main>
+      <HomeStyled>
         <Hero title="Our blogs" />
         <Blogs blogs={results} />
-      </main>
+      </HomeStyled>
       <Footer />
     </>
   );
 };
 
 export default Homepage;
+
+const HomeStyled = styled.main`
+  ${() => {
+    return css``;
+  }}
+`;

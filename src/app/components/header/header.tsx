@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import styles from './header.module.css';
+import styled, { css } from 'styled-components';
 
 const Header = () => {
   return (
-    <header className={styles.header}>
+    <HeaderStyled>
       <Link to={`/`}>
         <svg
           focusable="false"
@@ -25,8 +25,19 @@ const Header = () => {
           />
         </svg>
       </Link>
-    </header>
+    </HeaderStyled>
   );
 };
 
 export default Header;
+
+const HeaderStyled = styled.header`
+  ${() => {
+    return css`
+      padding: 16px 24px;
+      @media only screen and (min-width: 1024px) {
+        padding: 42px 24px;
+      }
+    `;
+  }}
+`;

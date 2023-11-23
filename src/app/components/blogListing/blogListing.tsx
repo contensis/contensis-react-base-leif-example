@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from './blogListing.module.css';
 import loadable from '@loadable/component';
 import { CardProps } from '~/components/blogCard/blogCard';
+import styled, { css } from 'styled-components';
 const Card = loadable(() => import('~/components/blogCard/blogCard'));
 
 interface BlogListingProps {
@@ -11,7 +11,7 @@ interface BlogListingProps {
 const BlogListing = ({ blogs }: BlogListingProps) => {
   if (!blogs || blogs.length <= 0) return null;
   return (
-    <ul className={styles.listing}>
+    <BlogListingStyled>
       {blogs?.map((blog, i: number) => {
         return (
           <li key={`${blog.id}_${i}`}>
@@ -25,8 +25,18 @@ const BlogListing = ({ blogs }: BlogListingProps) => {
           </li>
         );
       })}
-    </ul>
+    </BlogListingStyled>
   );
 };
 
 export default BlogListing;
+
+const BlogListingStyled = styled.ul`
+  ${() => {
+    return css`
+      list-style: none;
+      padding: 0 16px;
+      margin: 0;
+    `;
+  }}
+`;

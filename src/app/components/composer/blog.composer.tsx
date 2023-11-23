@@ -21,7 +21,7 @@ const BlogComposer = ({ items }: BlogComposerProps) => {
   if (!items || !Array.isArray(items)) return null;
 
   return (
-    <div data-composer="blog">
+    <div className="composer__blog">
       {items.map((props: BlogComposerItemProps, i: number) => {
         if (!props._type) return null;
 

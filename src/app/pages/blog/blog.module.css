@@ -1,9 +1,0 @@
-[data-composer='blog'] {
-  max-width: 720px;
-  width: 100%;
-  margin: 0 auto 40px;
-}
-
-[data-composer='blog'] > *:not(:last-child) {
-  margin-bottom: 40px;
-}

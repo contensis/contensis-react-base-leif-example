@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import styles from './footer.module.css';
+import styled, { css } from 'styled-components';
 
 const Footer = () => {
   const copyrightYear = new Date().getFullYear();
   return (
-    <footer className={styles.footer}>
-      <Link to={`/`} className="footer__logo">
+    <FooterStyled>
+      <Link to={`/`}>
         <svg
           focusable="false"
           aria-hidden="true"
@@ -26,7 +26,7 @@ const Footer = () => {
           />
         </svg>
       </Link>
-      <div className={styles.footer__socials}>
+      <div className="footer__socials">
         <a href="https://www.youtube.com/channel/UCbT4BlHVGyiEXmfJ2s_48Mg">
           <svg
             focusable="false"
@@ -78,11 +78,39 @@ const Footer = () => {
           <span className="sr-only">Contensis Twitter</span>
         </a>
       </div>
-      <div className={styles.footer__copyright}>
+      <div className="footer__copyright">
         <span>© {copyrightYear} Leif</span>
       </div>
-    </footer>
+    </FooterStyled>
   );
 };
 
 export default Footer;
+
+const FooterStyled = styled.footer`
+  ${() => {
+    return css`
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 16px;
+      @media only screen and (min-width: 1024px) {
+        padding: 80px 16px;
+      }
+      .footer__socials {
+        display: flex;
+        align-items: center;
+        margin: 24px 0;
+      }
+      .footer__socials a:not(:last-child) {
+        margin-right: 16px;
+      }
+
+      .footer__copyright {
+        color: #2b2f51;
+        font-size: 1rem;
+        line-height: 1.5;
+      }
+    `;
+  }}
+`;

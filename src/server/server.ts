@@ -1,15 +1,14 @@
 import { path as appRootPath } from 'app-root-path';
 import ZengentiAppServer from '@zengenti/contensis-react-base';
-import ReactApp from '../app/App';
+import ReactApp from '~/App';
 
-import withReducers from '../app/redux/reducers';
-import withSagas from '../app/redux/sagas';
-import withEvents from '../app/redux/withEvents';
+import routes from '~/routes';
+import withReducers from '~/redux/reducers';
+import withSagas from '~/redux/sagas';
+import withEvents from '~/routes/withEvents';
 
-import routes from '../app/routes';
-import packagejson from '../../package.json';
-
-import ServerFeatures from '../server/features/configure';
+import ServerFeatures from './features/configure';
+import packagejson from '-/package.json';
 
 ZengentiAppServer.start(
   ReactApp,
@@ -20,13 +19,15 @@ ZengentiAppServer.start(
     withReducers,
     withSagas,
     withEvents,
-    disableSsrRedux: false,
-    reverseProxyPaths: [],
+    disableSsrRedux: DISABLE_SSR_REDUX /* global DISABLE_SSR_REDUX */,
+    reverseProxyPaths: Object.values(
+      REVERSE_PROXY_PATHS /* global REVERSE_PROXY_PATHS */
+    ),
     // Some information about the project and the build to pass to the start config
     packagejson,
     scripts: { startup: `startup-${packagejson.version}.js` },
-    staticFolderPath: '/static',
-    staticRoutePath: '/static',
+    staticFolderPath: STATIC_PATH /* global STATIC_PATH */,
+    staticRoutePath: STATIC_PATH,
     // The HTML templates we will render the app into
     templates: {
       html: 'dist/index.html',
