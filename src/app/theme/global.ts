@@ -40,7 +40,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   html, body {
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-family: 'Inter', sans-serif;
   }
 
   /* Set core root defaults */
@@ -65,7 +65,7 @@ const GlobalStyle = createGlobalStyle`
   h4,
   h5,
   h6 {
-    font-family: 'Source Serif Pro', serif;
+    font-family: 'Source Serif 4', serif;
   }
   h1 {
     font-size: 2.5rem;

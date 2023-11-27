@@ -14,7 +14,7 @@ export default LeadParagraph;
 const LeadParagraphStyled = styled.p`
   ${() => {
     return css`
-      font-family: 'Source Serif Pro', serif;
+      font-family: 'Source Serif 4', serif;
       font-size: 1.375rem;
       font-weight: 600;
       line-height: 2rem;

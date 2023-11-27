@@ -50,7 +50,7 @@ const BlogpageStyled = styled.main`
         border-radius: 4px;
         color: #2b2f51;
         display: block;
-        font-family: 'Source Serif Pro', serif;
+        font-family: 'Source Serif 4', serif;
         font-size: 1.25rem;
         font-weight: 600;
         line-height: 2rem;

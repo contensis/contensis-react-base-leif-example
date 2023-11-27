@@ -44,7 +44,7 @@ const AvatarStyled = styled.div`
       }
 
       .avatar__name {
-        font-family: 'Source Serif Pro', serif;
+        font-family: 'Source Serif 4', serif;
         font-size: 1rem;
         font-weight: 600;
         line-height: 1.5rem;

@@ -48,16 +48,16 @@ const CardStyled = styled.div`
       flex-direction: column;
       gap: 40px;
       padding: 62px 16px;
-      max-width: 600px;
       width: 100%;
       margin: 0 auto;
       position: relative;
+      max-width: 700px;
       @media only screen and (min-width: 1024px) {
         justify-content: flex-start;
         align-items: center;
         flex-direction: row;
         padding: 62px;
-        max-width: 800px;
+        max-width: 1000px;
       }
       &:hover {
         box-shadow: 0px 16px 24px rgba(56, 33, 146, 0.07);
